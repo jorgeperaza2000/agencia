@@ -2,8 +2,8 @@
 /**
  * @Author: jorge
  * @Date:   2017-04-04 22:10:49
- * @Last Modified by:   jorge
- * @Last Modified time: 2017-04-04 22:29:37
+ * @Last Modified by:   Jorge Peraza
+ * @Last Modified time: 2017-04-05 01:02:45
  */
 namespace socketHttp;
 
@@ -22,7 +22,7 @@ class socketHttp {
 		
 		} else {
 		
-			$this->_urlBase = "http://localhost/cda_server/apis/";	
+			$this->_urlBase = "http://localhost/agencia/apis/";	
 		
 		}
 

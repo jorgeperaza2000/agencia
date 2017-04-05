@@ -2,8 +2,8 @@
 /**
  * @Author: jorge
  * @Date:   2017-04-04 21:12:37
- * @Last Modified by:   jorge
- * @Last Modified time: 2017-04-05 00:19:11
+ * @Last Modified by:   Jorge Peraza
+ * @Last Modified time: 2017-04-05 01:06:27
  */
 namespace Routes;
 
@@ -41,8 +41,12 @@ class Routes {
 					if ( method_exists( $this->controller, $this->action ) ) {
 
 						$method = $this->action;
-					
-						$obj->$method();
+						
+						if ( $this->parameter ) {
+							$obj->$method( $this->parameter );
+						} else {
+							$obj->$method();
+						}
 						
 					} else {
 

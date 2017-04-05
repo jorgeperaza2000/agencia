@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /cda_server
+RewriteBase /agencia
 
 RewriteRule ^/ index.php
 RewriteRule ^login/?$ index.php
@@ -9,7 +9,7 @@ RewriteRule ^index/?$ index.php
 RewriteRule ^(.+)/assets/(.+)$ assets/$2 [L]
 RewriteRule ^assets/(.+)$ assets/$1 [L]
 
-RewriteRule ^([a-z]+)/([a-zA-Z]+)/(.[^/]+)$ routes.php?&controller=$1&action=$2&parameter=$3 [L]
+RewriteRule ^([a-z]+)/([a-zA-Z]+)/([a-zA-Z0-9]+)$ routes.php?&controller=$1&action=$2&parameter=$3 [L]
 RewriteRule ^([a-z]+)/([a-zA-Z]+)$ routes.php?&controller=$1&action=$2 [L]
 RewriteRule ^([a-z]+)/?$ routes.php [L]
 

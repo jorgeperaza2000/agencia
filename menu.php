@@ -1,7 +1,7 @@
 <ul id="main-menu" class="main-menu">
 	<!-- add class "multiple-expanded" to allow multiple submenus to open -->
 	<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-	<div id="statusMenu" style="display:none;" data-controller="<?=isset($_GET["c"])?$_GET["c"]:""?>"></div>
+	<div id="statusMenu" style="display:none;" data-controller="<?=isset($this->c)?$this->c:""?>"></div>
 	<li id="dashboard">
 		<a href="dashboard.php">
 			<i class="entypo-gauge"></i>
