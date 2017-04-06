@@ -2,8 +2,8 @@
 /**
  * @Author: jorge
  * @Date:   2017-04-04 21:12:37
- * @Last Modified by:   jorge
- * @Last Modified time: 2017-04-05 00:31:03
+ * @Last Modified by:   Jorge Peraza
+ * @Last Modified time: 2017-04-05 22:18:14
  */
 
 namespace ControllerApp;
@@ -17,6 +17,7 @@ class ControllerApp extends socketHttp{
 	public $action;
 	public $parameter;
 	public $render;
+	private $_basePath;
 
 	public function __construct() {
 
@@ -27,6 +28,7 @@ class ControllerApp extends socketHttp{
 		$this->action = isset($_GET["action"])?$_GET["action"]:"";
 		$this->parameter = isset($_GET["parameter"])?$_GET["parameter"]:"";
 		$this->render = true;
+		$this->_basePath = "http://localhost/agencia/";
 
 	}
 
@@ -54,6 +56,18 @@ class ControllerApp extends socketHttp{
 
 	}
 
-	
+	public function redirect( $path = null ) {
+
+		if ( empty( $path ) ) {
+			
+			header("location: " . $this->_basePath . $this->c . "/index" );
+
+		} else {
+
+			header("location: " . $this->_basePath . $path );
+
+		}
+
+	}	
 
 }
